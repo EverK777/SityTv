@@ -1,4 +1,4 @@
-package com.jobsity.sitytv.ui.theme
+package com.jobsity.sitytv.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
