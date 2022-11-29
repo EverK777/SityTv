@@ -115,6 +115,8 @@ dependencies {
 
     // Dagger Hilt
     implementation("com.google.dagger:hilt-android:$hilt_di")
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     kapt "com.google.dagger:hilt-android-compiler:$hilt_di"
     kapt "androidx.hilt:hilt-compiler:$hilt_compiler"
 
