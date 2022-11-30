@@ -22,5 +22,84 @@
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
         <item name="android:statusBarColor">@color/colorBackground</item>
+        <!-- Font styles. -->
+        <item name="textAppearanceHeadline1">@style/textAppearanceH1</item>
+        <item name="textAppearanceHeadline2">@style/textAppearanceH2</item>
+        <item name="textAppearanceHeadline3">@style/textAppearanceH3</item>
+        <item name="textAppearanceHeadline4">@style/textAppearanceH4</item>
+        <item name="textAppearanceHeadline5">@style/textAppearanceH5</item>
+        <item name="textAppearanceHeadline6">@style/textAppearanceH6</item>
+        <item name="textAppearanceSubtitle1">@style/textAppearanceSubtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/textAppearanceSubtitle2</item>
+        <item name="textAppearanceBody1">@style/textAppearanceBody1</item>
+        <item name="textAppearanceBody2">@style/textAppearanceBody2</item>
+        <item name="textAppearanceButton">@style/textAppearanceButton</item>
+        <item name="textAppearanceCaption">@style/textAppearanceCaption</item>
+        <item name="textAppearanceOverline">@style/textAppearanceOverline</item>
+    </style>
+
+    <style name="textAppearanceH1" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_color_h1</item>
+        <item name="android:textSize">@dimen/headline1</item>
+    </style>
+
+    <style name="textAppearanceH2" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_color_h2</item>
+        <item name="android:textSize">@dimen/headline2</item>
+    </style>
+
+    <style name="textAppearanceH3" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_color_h3</item>
+        <item name="android:textSize">@dimen/headline3</item>
+    </style>
+
+    <style name="textAppearanceH4" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_color_h4</item>
+        <item name="android:textSize">@dimen/headline4</item>
+    </style>
+
+    <style name="textAppearanceH5" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_color_h5</item>
+        <item name="android:textSize">@dimen/headline5</item>
+    </style>
+
+    <style name="textAppearanceH6" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_color_h6</item>
+        <item name="android:textSize">@dimen/headline6</item>
+    </style>
+
+    <style name="textAppearanceSubtitle1" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_subtitle_1</item>
+        <item name="android:textSize">@dimen/subtitle1</item>
+    </style>
+
+    <style name="textAppearanceSubtitle2" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_subtitle_2</item>
+        <item name="android:textSize">@dimen/subtitle2</item>
+    </style>
+
+    <style name="textAppearanceBody1" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_body_1</item>
+        <item name="android:textSize">@dimen/body1</item>
+    </style>
+
+    <style name="textAppearanceBody2" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_body_2</item>
+        <item name="android:textSize">@dimen/body2</item>
+    </style>
+
+    <style name="textAppearanceButton" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_button</item>
+        <item name="android:textSize">@dimen/button</item>
+    </style>
+
+    <style name="textAppearanceCaption" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_caption</item>
+        <item name="android:textSize">@dimen/caption</item>
+    </style>
+
+    <style name="textAppearanceOverline" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/font_overline</item>
+        <item name="android:textSize">@dimen/overline</item>
     </style>
 </resources>

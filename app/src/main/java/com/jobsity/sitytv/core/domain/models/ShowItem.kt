@@ -10,5 +10,6 @@ data class ShowItem(
     val image: Image?,
     val name: String?,
     val schedule: Schedule?,
-    val summary: String?
+    val summary: String?,
+    val favorite: Boolean?
 )
