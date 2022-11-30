@@ -9,10 +9,26 @@
     <color name="colorOnSecondary">#FFFFFF</color>
     <color name="colorTertiary">#534bae</color>
     <color name="colorOnTertiary">#FFFFFF</color>
-    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorBackground">#EFEEEE</color>
     <color name="colorOnBackground">#000000</color>
     <color name="colorSurface">#FFECEC</color>
     <color name="colorOnSurface">#000000</color>
     <color name="colorError">#D42C34</color>
     <color name="colorOnError">#FFFFFF</color>
+    <!-- Font colors -->
+    <color name="font_color_h1">#000000</color>
+    <color name="font_color_h2">#000000</color>
+    <color name="font_color_h3">#000000</color>
+    <color name="font_color_h4">#000000</color>
+    <color name="font_color_h5">#000000</color>
+    <color name="font_color_h6">#000000</color>
+    <color name="font_subtitle_1">#494949</color>
+    <color name="font_subtitle_2">#595959</color>
+    <color name="font_body_1">#000000</color>
+    <color name="font_body_2">#595959</color>
+    <color name="font_button">#FFFFFF</color>
+    <color name="font_caption">#000000</color>
+    <color name="font_overline">#000000</color>
+    <!-- Others -->
+    <color name="favorite_color">#E91E63</color>
 </resources>

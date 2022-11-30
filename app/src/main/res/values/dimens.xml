@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- margin and padding dimens -->
+    <dimen name="margin_padding_horizontal_general">16dp</dimen>
+    <dimen name="margin_padding_vertical_general">16dp</dimen>
+    <dimen name="margin_padding_vertical_1">4dp</dimen>
+    <dimen name="margin_padding_vertical_2">8dp</dimen>
+    <dimen name="margin_padding_vertical_3">16dp</dimen>
+    <dimen name="margin_padding_vertical_4">32dp</dimen>
+    <dimen name="margin_padding_vertical_5">60dp</dimen>
+    <dimen name="padding_toolbar">30dp</dimen>
+    <!-- fonts dimens -->
+    <dimen name="headline1">47sp</dimen>
+    <dimen name="headline2">40sp</dimen>
+    <dimen name="headline3">35sp</dimen>
+    <dimen name="headline4">32sp</dimen>
+    <dimen name="headline5">30sp</dimen>
+    <dimen name="headline6">25sp</dimen>
+    <dimen name="subtitle1">22sp</dimen>
+    <dimen name="subtitle2">20sp</dimen>
+    <dimen name="body1">16sp</dimen>
+    <dimen name="body2">17sp</dimen>
+    <dimen name="button">16sp</dimen>
+    <dimen name="caption">12sp</dimen>
+    <dimen name="overline">10sp</dimen>
+    <!-- icons dimens -->
+    <dimen name="icon_container_size">48dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <!-- elevation -->
+    <dimen name="normal_elevation">4dp</dimen>
+    <!-- corner radius -->
+    <dimen name="corner_radius_1">15dp</dimen>
+    <dimen name="corner_radius_2">25dp</dimen>
+    <!-- view pager image size -->
+    <dimen name="height_poster">400dp</dimen>
+    <dimen name="width_poster">250dp</dimen>
+    <!-- toolbar -->
+    <dimen name="toolbar_background_height">120.dp</dimen>
+</resources>

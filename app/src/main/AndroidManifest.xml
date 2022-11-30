@@ -8,7 +8,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".MovieTube"
+        android:name=".SityTv"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SityTv"
@@ -16,7 +16,9 @@
         <activity
             android:name=".presentation.features.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.SityTv">
+            android:theme="@style/Theme.SityTv"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

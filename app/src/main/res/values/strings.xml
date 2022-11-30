@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">SityTv</string>
+    <string name="sity">Sity</string>
+    <string name="tv">Tv</string>
     <string name="something_went_wrong_try_again">Something went wrong, try again</string>
     <string name="something_went_network_connection">Something went wrong, verify your internet connection</string>
+    <string name="favorites">Favorites</string>
+    <string name="popular_shows">Popular Shows</string>
+    <string name="search">Search</string>
 </resources>
