@@ -37,6 +37,7 @@
         <item name="textAppearanceButton">@style/textAppearanceButton</item>
         <item name="textAppearanceCaption">@style/textAppearanceCaption</item>
         <item name="textAppearanceOverline">@style/textAppearanceOverline</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
     <style name="textAppearanceH1" parent="@android:style/TextAppearance">
