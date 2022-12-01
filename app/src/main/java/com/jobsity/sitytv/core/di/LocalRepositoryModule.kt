@@ -11,7 +11,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class LocalRepositoryModule {
+object LocalRepositoryModule {
     @Provides
     @Singleton
     fun providesLocalRepository(favoriteDao: FavoriteDao): LocalRepository {

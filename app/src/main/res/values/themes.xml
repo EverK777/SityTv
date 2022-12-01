@@ -20,8 +20,9 @@
         <!-- Status and Navigation bar color. -->
         <item name="android:navigationBarColor" tools:targetApi="m">@color/colorBackground</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
-        <item name="android:statusBarColor">@color/colorBackground</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- Font styles. -->
         <item name="textAppearanceHeadline1">@style/textAppearanceH1</item>
         <item name="textAppearanceHeadline2">@style/textAppearanceH2</item>

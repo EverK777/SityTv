@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -13,14 +14,17 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.PagerState
+import com.jobsity.sitytv.core.domain.models.ShowItem
 import com.jobsity.sitytv.presentation.composables.PagerShowsList
 import com.jobsity.sitytv.presentation.features.home.HomeViewModelEvents
 
 @ExperimentalComposeUiApi
 @ExperimentalPagerApi
+@ExperimentalMaterialApi
 @Composable
 fun ShowsComposable(
-    homeViewModelEvents: HomeViewModelEvents
+    homeViewModelEvents: HomeViewModelEvents,
+    navigateToDetail: (showItem: ShowItem) -> Unit
 ) {
     val lazyListState = rememberLazyListState()
     val shows = homeViewModelEvents.getShows.collectAsLazyPagingItems()
@@ -47,7 +51,12 @@ fun ShowsComposable(
             state = lazyListState
         ) {
             item {
-                PagerShowsList(viewModel = homeViewModelEvents, pagerState = pagerState, shows = shows)
+                PagerShowsList(
+                    viewModel = homeViewModelEvents,
+                    pagerState = pagerState,
+                    shows = shows,
+                    navigateToDetail
+                )
             }
         }
 

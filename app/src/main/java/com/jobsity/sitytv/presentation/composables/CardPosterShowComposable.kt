@@ -4,10 +4,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.ScaleFactor
 import androidx.compose.ui.layout.lerp
 import androidx.compose.ui.res.dimensionResource
@@ -15,14 +17,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.lerp
 import com.jobsity.sitytv.R
 
+@ExperimentalMaterialApi
 @Composable
 fun ItemPager(
     imageUrl: String,
-    pageOffset: () -> Float
+    pageOffset: () -> Float,
+    onClick: () -> Unit
 ) {
     Card(
         backgroundColor = MaterialTheme.colors.surface,
         elevation = dimensionResource(id = R.dimen.normal_elevation),
+        onClick = onClick,
         shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_2)),
         modifier = Modifier
             .padding(vertical = dimensionResource(id = R.dimen.margin_padding_vertical_general))
@@ -51,6 +56,6 @@ fun ItemPager(
                 }
             }
     ) {
-        BannerShowComposable(imageUrl)
+        BannerShowComposable(imageUrl) { ContentScale.FillBounds }
     }
 }

@@ -40,6 +40,7 @@ class HomeViewModelTest {
                 null,
                 "Test name",
                 null,
+                0,
                 "Test",
                 false
             )

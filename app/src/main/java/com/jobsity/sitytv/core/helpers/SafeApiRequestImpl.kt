@@ -25,7 +25,7 @@ class SafeApiRequestImpl @Inject constructor(
                     else -> {
                         ApiResultHandle.ApiError(
                             code = "500",
-                            errorMessage = context.getString(R.string.something_went_network_connection)
+                            errorMessage = throwable.message
                         )
                     }
                 }

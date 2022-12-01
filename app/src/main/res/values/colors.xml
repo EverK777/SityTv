@@ -31,4 +31,5 @@
     <color name="font_overline">#000000</color>
     <!-- Others -->
     <color name="favorite_color">#E91E63</color>
+    <color name="backgroundColorEpisodes">#BCFFFFFF</color>
 </resources>

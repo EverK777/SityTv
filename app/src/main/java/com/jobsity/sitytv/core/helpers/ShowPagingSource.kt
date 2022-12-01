@@ -66,6 +66,7 @@ class ShowPagingSource constructor(
                     genres = it.genres,
                     image = it.image,
                     name = it.name,
+                    runtime = it.runtime,
                     schedule = it.schedule,
                     summary = it.summary,
                     favorite = checkIfIsFavorite(it.id)

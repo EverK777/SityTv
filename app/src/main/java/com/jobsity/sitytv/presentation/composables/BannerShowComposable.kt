@@ -19,11 +19,12 @@ import com.skydoves.landscapist.glide.GlideImage
 
 @Composable
 fun BannerShowComposable(
-    imageUrl: String
+    imageUrl: String,
+    contentScale: () -> ContentScale
 ) {
     GlideImage(
         imageModel = imageUrl,
-        contentScale = ContentScale.FillBounds,
+        contentScale = contentScale(),
         shimmerParams = ShimmerParams(
             baseColor = MaterialTheme.colors.background,
             highlightColor = Color.LightGray,
