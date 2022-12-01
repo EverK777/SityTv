@@ -2,6 +2,7 @@ package com.jobsity.sitytv.presentation.features
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import com.jobsity.sitytv.R
 import com.jobsity.sitytv.databinding.ActivityMainBinding
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.activity_main, null, false)
         binding.also {
             it.lifecycleOwner = this
