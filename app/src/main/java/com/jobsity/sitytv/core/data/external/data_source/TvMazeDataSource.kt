@@ -1,5 +1,6 @@
 package com.jobsity.sitytv.core.data.external.data_source
 
+import com.jobsity.sitytv.core.domain.models.SeasonsResponse
 import com.jobsity.sitytv.core.domain.models.ShowResponse
 import com.jobsity.sitytv.core.helpers.ApiResultHandle
 import com.jobsity.sitytv.core.helpers.SafeApiRequest
@@ -13,5 +14,9 @@ class TvMazeDataSource constructor(
 ) : RemoteDataSource {
     override suspend fun requestShows(page: Int): ApiResultHandle<ShowResponse> {
         return safeApiRequest.safeApiRequest(coroutineDispatcher) { tvMazeApi.requestCurrentSeriesList(page) }
+    }
+
+    override suspend fun requestSeasons(id: Int): ApiResultHandle<SeasonsResponse> {
+        return safeApiRequest.safeApiRequest(coroutineDispatcher) { tvMazeApi.requestSeasons(id) }
     }
 }

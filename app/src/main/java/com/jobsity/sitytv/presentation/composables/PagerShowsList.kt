@@ -1,6 +1,7 @@
 package com.jobsity.sitytv.presentation.composables
 
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -16,11 +17,13 @@ import com.jobsity.sitytv.presentation.features.home.HomeViewModelEvents
 import kotlin.math.absoluteValue
 
 @ExperimentalPagerApi
+@ExperimentalMaterialApi
 @Composable
 fun PagerShowsList(
     viewModel: HomeViewModelEvents,
     pagerState: PagerState,
-    shows: LazyPagingItems<ShowItem>
+    shows: LazyPagingItems<ShowItem>,
+    navigateToDetail: (showItem: ShowItem) -> Unit
 ) {
     HorizontalPager(
         state = pagerState,
@@ -33,7 +36,11 @@ fun PagerShowsList(
         if (shows.itemCount <= 0) return@HorizontalPager
         val show = shows[page]
         val pageOffset = calculateCurrentOffsetForPage(page).absoluteValue
-        ItemPager(show?.image?.original ?: "", pageOffset = { pageOffset })
+        ItemPager(
+            show?.image?.original ?: "",
+            pageOffset = { pageOffset },
+            { show?.let { navigateToDetail.invoke(it) } }
+        )
         viewModel.setCurrentShowIndexIndex(currentPage)
     }
 }

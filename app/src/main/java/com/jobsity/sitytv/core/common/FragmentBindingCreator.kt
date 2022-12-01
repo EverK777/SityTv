@@ -13,12 +13,11 @@ abstract class FragmentBindingCreator<T : ViewDataBinding> : Fragment() {
     abstract val layoutId: Int
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        if (!::binding.isInitialized) {
-            binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
-            binding.also {
-                it.lifecycleOwner = this
-            }
+        binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
+        binding.also {
+            it.lifecycleOwner = viewLifecycleOwner
         }
+
         return binding.root
     }
 }
