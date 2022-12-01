@@ -1,5 +1,6 @@
 package com.jobsity.sitytv.core.data.external.data_source
 
+import com.jobsity.sitytv.core.domain.models.EpisodeDetailResponse
 import com.jobsity.sitytv.core.domain.models.SeasonsResponse
 import com.jobsity.sitytv.core.domain.models.ShowResponse
 import retrofit2.http.GET
@@ -12,4 +13,7 @@ interface TvMazeApi {
 
     @GET("shows/{id}/seasons")
     suspend fun requestSeasons(@Path("id") id: Int): SeasonsResponse
+
+    @GET("shows/{id}/episodebynumber")
+    suspend fun getEpisodeDetail(@Path("id") id: Int, @Query("season") season: Int, @Query("number") number: Int): EpisodeDetailResponse
 }

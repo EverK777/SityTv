@@ -1,6 +1,7 @@
 package com.jobsity.sitytv.core.data.external.repository
 
 import com.jobsity.sitytv.core.data.external.data_source.RemoteDataSource
+import com.jobsity.sitytv.core.domain.models.EpisodeDetailResponse
 import com.jobsity.sitytv.core.domain.models.SeasonsResponse
 import com.jobsity.sitytv.core.domain.models.ShowResponse
 import com.jobsity.sitytv.core.helpers.ApiResultHandle
@@ -15,5 +16,9 @@ class TvMazeRepository constructor(
 
     override suspend fun requestSeasons(id: Int): ApiResultHandle<SeasonsResponse> {
         return remoteDataSource.requestSeasons(id)
+    }
+
+    override suspend fun requestEpisodeDetail(showId: Int, season: Int, episodeNumber: Int): ApiResultHandle<EpisodeDetailResponse> {
+        return remoteDataSource.requestEpisodeDetail(showId, season, episodeNumber)
     }
 }

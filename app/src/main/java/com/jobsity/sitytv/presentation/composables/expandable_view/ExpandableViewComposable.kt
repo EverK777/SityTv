@@ -28,7 +28,7 @@ import com.jobsity.sitytv.core.helpers.getListOfEpisodes
 fun ExpandableViewComposable(
     viewModel: ExpandableViewModel,
     seasons: SeasonsResponse,
-    onEpisodeClick: (number: Int) -> Unit
+    onEpisodeClick: (seasonNumber: Int, episodeNumber: Int) -> Unit
 ) {
     val itemIds by viewModel.itemIds.collectAsState()
 
@@ -44,7 +44,9 @@ fun ExpandableViewComposable(
                         ExpandableView(
                             episodesList = season.getListOfEpisodes(stringResource(id = R.string.episode)),
                             isExpanded = itemIds.contains(index),
-                            onEpisodeClick = onEpisodeClick
+                            onEpisodeClick = {
+                                season.number?.let { it1 -> onEpisodeClick.invoke(it1, it) }
+                            }
                         )
                     }
                 }
@@ -108,7 +110,7 @@ fun ExpandableView(episodesList: List<String>, isExpanded: Boolean, onEpisodeCli
                     Box(
                         modifier = Modifier
                             .clickable(
-                                onClick = { onEpisodeClick.invoke(index) }
+                                onClick = { onEpisodeClick.invoke(index + 1) }
                             )
                             .padding(8.dp)
                     ) {
