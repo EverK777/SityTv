@@ -25,5 +25,27 @@
         <argument
             android:name="show"
             app:argType="com.jobsity.sitytv.core.domain.models.ShowItem" />
+        <action
+            android:id="@+id/action_detailFragment_to_episodeDetail"
+            app:destination="@id/episodeDetail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeDetail"
+        android:name="com.jobsity.sitytv.presentation.features.episode.EpisodeDetail"
+        android:label="fragment_episode_detail"
+        tools:layout="@layout/fragment_episode_detail" >
+        <argument
+            android:name="showId"
+            app:argType="integer" />
+        <argument
+            android:name="seasonNumber"
+            app:argType="integer" />
+        <argument
+            android:name="episodeNumber"
+            app:argType="integer" />
     </fragment>
 </navigation>

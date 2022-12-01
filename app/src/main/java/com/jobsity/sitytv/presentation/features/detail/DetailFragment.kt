@@ -13,6 +13,7 @@ import com.jobsity.sitytv.core.common.*
 import com.jobsity.sitytv.core.domain.models.SeasonsResponse
 import com.jobsity.sitytv.core.helpers.RequestStateApi
 import com.jobsity.sitytv.core.helpers.initComposeView
+import com.jobsity.sitytv.core.helpers.navigateToNextFragment
 import com.jobsity.sitytv.databinding.FragmentDetailBinding
 import com.jobsity.sitytv.presentation.composables.BannerShowComposable
 import com.jobsity.sitytv.presentation.composables.expandable_view.ExpandableViewComposable
@@ -29,9 +30,9 @@ class DetailFragment :
     override val layoutId: Int
         get() = R.layout.fragment_detail
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        lifecycleScope.launchWhenStarted {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewModel.seasonsFlow(args.show.id).collect {
                 when (it) {
                     is RequestStateApi.Loading -> binding.progressBarEpisodes.visibility = View.VISIBLE
@@ -56,7 +57,14 @@ class DetailFragment :
     private fun configComposableExpanded(seasons: SeasonsResponse) {
         binding.progressBarEpisodes.visibility = View.GONE
         initComposeView({
-            ExpandableViewComposable(viewModel = viewModel, seasons = seasons) {
+            ExpandableViewComposable(viewModel = viewModel, seasons = seasons) { season, episode ->
+                navigateToNextFragment(
+                    DetailFragmentDirections.actionDetailFragmentToEpisodeDetail(
+                        args.show.id,
+                        season,
+                        episode
+                    )
+                )
             }
         }, binding.expandableListComposable)
     }
