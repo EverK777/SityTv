@@ -17,4 +17,5 @@ The APK is in the root of the project in the branch Master with the name: app-de
 when install the apk to a physical device make sure that previously configure your device to accept unknow providers or insecure application.
 Or when the dialog shows of app insecure tap install anyway.
 
-
+### Optional features
+1. Unit test added 
