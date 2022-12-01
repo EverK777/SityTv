@@ -35,7 +35,7 @@
     <dimen name="height_poster">400dp</dimen>
     <dimen name="width_poster">250dp</dimen>
     <!-- image detail -->
-    <dimen name="height_image_detail">300dp</dimen>
+    <dimen name="height_image_detail">150dp</dimen>
     <dimen name="width_image_detail">150dp</dimen>
     <!-- toolbar -->
     <dimen name="toolbar_background_height">120.dp</dimen>

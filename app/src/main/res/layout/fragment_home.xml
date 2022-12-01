@@ -125,6 +125,79 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/popularShowsLabel" />
 
+
+        <RelativeLayout
+            android:id="@+id/searchViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+            android:visibility="gone"
+            android:background="@color/colorOnPrimary">
+
+            <ImageView
+                android:id="@+id/backIconSearch"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/margin_padding_horizontal_general"
+                android:layout_alignTop="@id/searchViewTextContainer"
+                android:layout_alignBottom="@id/searchViewTextContainer"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchViewTextContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:layout_toEndOf="@id/backIconSearch"
+                app:cardBackgroundColor="@color/colorBackground"
+                android:layout_marginHorizontal="@dimen/margin_padding_horizontal_general"
+                app:cardCornerRadius="@dimen/corner_radius_2"
+                app:layout_constraintStart_toStartOf="parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_padding_vertical_2">
+                
+                <EditText
+                    android:id="@+id/editTextSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/search"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/searchIconImage"
+                    android:background="@android:color/transparent"
+                    tools:ignore="Autofill,TextFields" />
+                    
+                    <ImageView
+                        android:id="@+id/searchIconImage"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerInParent="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_marginEnd="@dimen/margin_padding_vertical_general"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_baseline_search_24"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.compose.ui.platform.ComposeView
+                android:id="@+id/searchResult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="110dp"
+                android:layout_alignParentBottom="true" />
+            <ProgressBar
+                android:id="@+id/progressSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/colorPrimary"/>
+            
+        </RelativeLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

@@ -15,13 +15,11 @@ import com.jobsity.sitytv.R
 @ExperimentalMaterialApi
 @Composable
 fun PictureDetailComposable(
-    imageUrl: String,
-    onClick: () -> Unit = {}
+    imageUrl: String
 ) {
     Card(
         backgroundColor = MaterialTheme.colors.surface,
         elevation = dimensionResource(id = R.dimen.normal_elevation),
-        onClick = onClick,
         shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_2)),
         modifier = Modifier
             .padding(vertical = dimensionResource(id = R.dimen.margin_padding_vertical_general))
@@ -30,6 +28,6 @@ fun PictureDetailComposable(
                 width = dimensionResource(id = R.dimen.width_image_detail)
             )
     ) {
-        BannerShowComposable(imageUrl) { ContentScale.FillBounds }
+        BannerShowComposable(imageUrl) { ContentScale.Crop }
     }
 }
