@@ -42,25 +42,6 @@ class DetailFragment :
         }
     }
 
-    private fun configComposableExpanded(seasons: SeasonsResponse) {
-        binding.progressBarEpisodes.visibility = View.GONE
-        initComposeView({
-            ExpandableViewComposable(viewModel = viewModel, seasons = seasons) {
-            }
-        }, binding.expandableListComposable)
-    }
-
-    // 2. Episodes details
-    // 3. Search
-    // . 7. missing test
-    // , 8 refactor
-    // 6. APK + Readme
-
-    // 4. Finger print
-    // 3 apk + readme
-    // 5. Favorites
-    // 3 apk + readme
-
     override fun onStart() {
         super.onStart()
         setBindingProperties()
@@ -70,6 +51,14 @@ class DetailFragment :
         binding.seasonsContainer.setOnClickListener { showSeasons() }
         binding.closeFavoritesButton.setOnClickListener { closeSeasons() }
         binding.backIcon.setOnClickListener { handleBackPress() }
+    }
+
+    private fun configComposableExpanded(seasons: SeasonsResponse) {
+        binding.progressBarEpisodes.visibility = View.GONE
+        initComposeView({
+            ExpandableViewComposable(viewModel = viewModel, seasons = seasons) {
+            }
+        }, binding.expandableListComposable)
     }
 
     private fun handleBackPress() {
