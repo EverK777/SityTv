@@ -12,7 +12,7 @@ Context: For security you must not expose urls, api keys etc.
 
 ### App Install
 
-The APK is in the root of the project in the branch Master with the name: app-debug.apk downolad it.
+The APK is in the root of the project in the branch Master with the name: sitytv.apk downolad it.
 
 when install the apk to a physical device make sure that previously configure your device to accept unknow providers or insecure application.
 Or when the dialog shows of app insecure tap install anyway.
