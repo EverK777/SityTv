@@ -13,9 +13,7 @@ import com.jobsity.sitytv.R
 import com.jobsity.sitytv.core.common.*
 import com.jobsity.sitytv.core.domain.models.SearchResultResponse
 import com.jobsity.sitytv.core.domain.models.ShowItem
-import com.jobsity.sitytv.core.helpers.RequestStateApi
-import com.jobsity.sitytv.core.helpers.initComposeView
-import com.jobsity.sitytv.core.helpers.navigateToNextFragment
+import com.jobsity.sitytv.core.helpers.*
 import com.jobsity.sitytv.databinding.FragmentHomeBinding
 import com.jobsity.sitytv.presentation.composables.LogoAppComposable
 import com.jobsity.sitytv.presentation.composables.SearchShowsList
@@ -47,11 +45,16 @@ class HomeFragment :
 
         binding.searchView.setOnClickListener {
             binding.searchViewContainer.visibility = View.VISIBLE
+            binding.editTextSearch.requestFocus()
+            binding.editTextSearch.showKeyboard()
         }
         binding.searchIconImage.setOnClickListener { requestShowsByText() }
+        binding.editTextSearch.searchImeAction { requestShowsByText() }
+        binding.backIconSearch.setOnClickListener { requireActivity().onBackPressedDispatcher.onBackPressed() }
     }
 
     private fun requestShowsByText() {
+        binding.editTextSearch.hideKeyboard()
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.onSearch(binding.editTextSearch.text.toString()).collect {
                 when (it) {
@@ -83,6 +86,7 @@ class HomeFragment :
         ) {
             override fun handleOnBackPressed() {
                 if (binding.searchViewContainer.visibility == View.VISIBLE) {
+                    binding.editTextSearch.hideKeyboard()
                     binding.searchViewContainer.visibility = View.GONE
                 } else {
                     requireActivity().finish()

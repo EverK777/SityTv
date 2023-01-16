@@ -54,13 +54,14 @@
 
                 <ImageView
                     android:id="@+id/backIcon"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:padding="8dp"
                     android:layout_marginTop="44dp"
                     android:layout_marginStart="@dimen/margin_padding_vertical_general"
                     android:src="@drawable/ic_baseline_arrow_back_24"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:background="@drawable/bg_ic_arrow_back"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="ContentDescription" />
             </androidx.constraintlayout.widget.ConstraintLayout>

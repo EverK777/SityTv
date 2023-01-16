@@ -62,13 +62,14 @@
 
                 <ImageView
                     android:id="@+id/backIcon"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
                     android:layout_marginTop="44dp"
+                    android:padding="8dp"
                     android:layout_marginStart="@dimen/margin_padding_vertical_general"
+                    android:background="@drawable/bg_ic_arrow_back"
                     android:src="@drawable/ic_baseline_arrow_back_24"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:background="?attr/selectableItemBackgroundBorderless"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="ContentDescription" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -173,7 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_padding_vertical_general"
                     android:layout_marginTop="110dp"
-                    app:cardBackgroundColor="@color/colorOnPrimary"
+                    app:cardBackgroundColor="@color/series_select_box"
                     app:cardCornerRadius="4dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
