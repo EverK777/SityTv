@@ -156,7 +156,7 @@ dependencies {
 
 
     // Compatible with Compose Material, includes MdcTheme
-    implementation "com.google.android.material:compose-theme-adapter:1.2.1"
+    implementation "com.google.accompanist:accompanist-themeadapter-material:0.29.2-rc"
 
 
     testImplementation "androidx.paging:paging-common-ktx:$paging_version"
