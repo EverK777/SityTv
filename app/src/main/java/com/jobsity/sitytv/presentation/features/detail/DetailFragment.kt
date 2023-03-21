@@ -18,6 +18,7 @@ import com.jobsity.sitytv.databinding.FragmentDetailBinding
 import com.jobsity.sitytv.presentation.composables.BannerShowComposable
 import com.jobsity.sitytv.presentation.composables.expandable_view.ExpandableViewComposable
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @ExperimentalMaterialApi
 @AndroidEntryPoint
@@ -32,7 +33,7 @@ class DetailFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.seasonsFlow(args.show.id).collect {
                 when (it) {
                     is RequestStateApi.Loading -> binding.progressBarEpisodes.visibility = View.VISIBLE

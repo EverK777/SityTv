@@ -5,6 +5,7 @@ import com.google.common.truth.Truth
 import com.jobsity.sitytv.core.common.AppConstants
 import com.jobsity.sitytv.core.domain.models.ShowItem
 import com.jobsity.sitytv.core.domain.use_cases.GetShowUseCase
+import com.jobsity.sitytv.core.domain.use_cases.SearchShowsUseCase
 import com.jobsity.sitytv.presentation.features.home.HomeViewModel
 import com.jobsity.sitytv.utils.MainCoroutineRule
 import kotlinx.coroutines.*
@@ -24,6 +25,9 @@ class HomeViewModelTest {
 
     @Mock
     private lateinit var showUseCase: GetShowUseCase
+
+    @Mock
+    private lateinit var searchShowsUseCase: SearchShowsUseCase
 
     private lateinit var sut: HomeViewModel
 
@@ -53,7 +57,7 @@ class HomeViewModelTest {
             .thenReturn(
                 flowOf(pagingData)
             )
-        sut = HomeViewModel(showUseCase)
+        sut = HomeViewModel(showUseCase = showUseCase, searchShowsUseCase = searchShowsUseCase)
     }
 
     @ExperimentalCoroutinesApi
