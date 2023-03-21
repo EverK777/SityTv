@@ -13,7 +13,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import com.jobsity.sitytv.R
 import com.jobsity.sitytv.core.domain.models.SearchResultResponse
@@ -45,7 +44,7 @@ fun SearchShowsList(
                     modifier = Modifier
                         .padding(dimensionResource(id = R.dimen.margin_padding_horizontal_general)),
                     style = MaterialTheme.typography.subtitle2,
-                    color = colorResource(id = R.color.font_body_1)
+                    color = MaterialTheme.colors.onBackground
                 )
             }
         }

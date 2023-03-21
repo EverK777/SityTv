@@ -38,5 +38,5 @@
     <dimen name="height_image_detail">150dp</dimen>
     <dimen name="width_image_detail">150dp</dimen>
     <!-- toolbar -->
-    <dimen name="toolbar_background_height">120.dp</dimen>
+    <dimen name="toolbar_background_height">120dp</dimen>
 </resources>

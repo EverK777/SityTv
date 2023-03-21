@@ -102,7 +102,7 @@
                     android:maxLines="1"
                     android:text="@{name}"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                    android:textColor="@color/font_body_1"
+                    android:textColor="?colorOnSurface"
                     android:textStyle="bold"
                     tools:text="Show Title" />
 

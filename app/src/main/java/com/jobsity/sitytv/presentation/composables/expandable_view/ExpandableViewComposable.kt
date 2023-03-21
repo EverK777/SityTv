@@ -14,7 +14,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -68,7 +67,7 @@ fun HeaderView(seasonText: String, onClickItem: () -> Unit) {
             text = seasonText,
             fontWeight = FontWeight.W700,
             style = MaterialTheme.typography.subtitle1,
-            color = colorResource(R.color.font_body_1),
+            color = MaterialTheme.colors.onBackground,
             modifier = Modifier
                 .align(Alignment.Center)
                 .fillMaxWidth(),
@@ -117,7 +116,7 @@ fun ExpandableView(episodesList: List<String>, isExpanded: Boolean, onEpisodeCli
                         Text(
                             text = item,
                             fontSize = 16.sp,
-                            color = colorResource(R.color.font_body_1),
+                            color = MaterialTheme.colors.onBackground,
                             modifier = Modifier
                                 .fillMaxWidth(),
                             textAlign = TextAlign.Center
